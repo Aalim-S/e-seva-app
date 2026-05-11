@@ -56,7 +56,7 @@ const handleSubmit = async (e) => {
     formData.append("document", document)
 
     const response = await axios.post(
-      "http://localhost:5000/api/apply",
+      "https://e-seva-backend-iuw1.onrender.com/api/apply",
       formData
     )
 

@@ -17,7 +17,7 @@ function Admin() {
     try {
 
       const response = await axios.get(
-        "http://localhost:5000/api/applications"
+        "https://e-seva-backend-iuw1.onrender.com/api/applications"
       )
 
       setApplications(response.data)
@@ -35,7 +35,7 @@ function Admin() {
     try {
 
       await axios.delete(
-        `http://localhost:5000/api/applications/${id}`
+        `https://e-seva-backend-iuw1.onrender.com/api/applications/${id}`
       )
 
       alert("Application Deleted")
@@ -111,7 +111,7 @@ function Admin() {
               Status: {app.status}
             </p>
             <a
-              href={`http://localhost:5000/uploads/${app.document}`}
+              href={`https://e-seva-backend-iuw1.onrender.com/uploads/${app.document}`}
               target="_blank"
               className="text-blue-600 underline block mt-2"
             >
@@ -162,7 +162,7 @@ const updateStatus = async (id, status) => {
   try {
 
     await axios.put(
-      `http://localhost:5000/api/applications/${id}`,
+      `https://e-seva-backend-iuw1.onrender.com/api/applications/${id}`,
       { status }
     )
 
